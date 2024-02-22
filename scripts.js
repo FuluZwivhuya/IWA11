@@ -1,61 +1,42 @@
-/*script.js
-let r;//root
-let b; //biscuits
-let d; // donuts
-let p; // pancakes
-let s; //status
-*/
 
+let sections = document.getElementsByTagName('section');
+console.log(sections);
 
-const root1 = document.querySelector('[data-key="order1"]');
-const biscuits1 = document.querySelector('[data-biscuits="10"]');
-const donuts1 = document.querySelector('[data-donuts="13"]');
-const pancakes1 = document.querySelector('[data-pancakes="0"]');
-const status1 = document.querySelector('[data-delivered="false"]')//console.log (biscuits1)
+const root1 = sections[0].querySelector("dl").getAttribute("data-key");
+const biscuits1 = sections[0].querySelector("dl").getAttribute("data-biscuits")
+const donuts1 = sections[0].querySelector("dl").getAttribute("data-donuts");
+const pancakes1 = sections[0].querySelector("dl").getAttribute("data-pancakes");
+const status1 = sections[0].querySelector("dl").getAttribute("data-delivered");
+console.log (biscuits1);
 
-const root2 = document.querySelector('[data-key="order2"]'); 
-const biscuits2 = document.querySelector('[data-biscuits="5"]');
-const donuts2 = document.querySelector('[data-donuts="0"]');
-const pancakes2 = document.querySelector('[data-pancakes="2"]');
-const status2 = document.querySelector('[data-delivered="false"]');
+const root2 = sections[1].querySelector("dl").getAttribute("data-key");
+const biscuits2 = sections[1].querySelector("dl").getAttribute("data-biscuits");
+const donuts2 = sections[1].querySelector("dl").getAttribute("data-donuts");
+const pancakes2 = sections[1].querySelector("dl").getAttribute("data-pancakes");
+const status2 = sections[1].querySelector("dl").getAttribute("data-delivered");
+console.log(biscuits2)
 
-const root3 = document.querySelector('[data-key="order3"]');
-const biscuits3 = document.querySelector('[data-biscuits="12"]');
-const donuts3 = document.querySelector('[data-donuts="11" ]');
-const pancakes3 = document.querySelector('[data-pancakes="15"]');
-const status3 = document.querySelector('[data-delivered="true]');
+const root3 = sections[2].querySelector("dl").getAttribute("data-key");
+const biscuits3 = sections[2].querySelector("dl").getAttribute("data-biscuits");
+const donuts3 = sections[2].querySelector("dl").getAttribute("data-donuts");
+const pancakes3 = sections[2].querySelector("dl").getAttribute("data-pancakes");
+const status3 = sections[2].querySelector("dl").getAttribute("data-delivered");
 
-//console.log(root3)
 let myCount = document.getElementsByClassName("count");
+
 console.log(myCount)
-myCount[0].textContent = '10';
-myCount[1].textContent ='13';
-myCount[2].textContent ='0';
-myCount[3].textContent = '5';
-myCount[4].textContent ='0';
-myCount[5].textContent ='2';
-myCount[6].textContent = '12';
-myCount[7].textContent = '11';
-myCount[8].textContent = '15';
+myCount[0].textContent = biscuits1;
+myCount[1].textContent =donuts1;
+myCount[2].textContent =pancakes1;
+myCount[3].textContent = biscuits2;
+myCount[4].textContent =donuts2;
+myCount[5].textContent =pancakes2;
+myCount[6].textContent = biscuits3;
+myCount[7].textContent = donuts3;
+myCount[8].textContent = pancakes3;
 
 let myStatus = document.getElementsByClassName("status");
 console.log(myStatus)
-myStatus[0].textContent = 'false';
-myStatus[1].textContent = 'false';
-myStatus[2].textContent = 'true';
-
-
-/*biscuits = biscuits1.getAttribute('biscuit1');
-donuts1   = 1-root.donuts,
-pancakes1 = 1-root.pancakes,
-status1   = 1-root.status ? Delivered : Pending
-
-biscuits2 = 2-root.biscuits,
-donuts2   = 2-root.donuts,
-pancakes2 = 2-root.pancakes,
-status2   = 2-root.status ? Delivered : Pending
-
-biscuits3 = 3-root.biscuits,
-donuts3   = 3-root.donuts,
-pancakes3 = 3-root.pancakes,
-status3   = 3-root.status ? Delivered : Pending*/
+myStatus[0].textContent = status1;
+myStatus[1].textContent = status2;
+myStatus[2].textContent = status3;
